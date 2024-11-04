@@ -43,5 +43,40 @@
    
 	</script>
 
+<p>
+		<label for="n1">First Number</label>
+		<input id="n1" name="n1" type="number" onkeyup="compute()">
+		<label for="n2">Second Number</label>
+		<input id="n2" name="n2" type="number" onkeyup="compute()">
+
+		<!-- <button onclick="compute()"> Compute Sum </button> -->
+	</p>
+ 
+	<p>
+		<label for="sum" id="sumlabel">The sum is:</label>  
+		<input id="sum" name="sum" type="number" readonly></input>
+	</p>
+
+	<script>
+    	function compute()
+        {
+        var a,b;
+
+        a = document.getElementById("n1").value*1; 
+        b = document.getElementById("n2").value*1;  
+
+        console.log(a);
+        console.log(b);
+
+        let c  = a + b;
+
+        document.getElementById("sumlabel").innerHTML='The sum of '
+        +a+' and '+b+' is:';
+        document.getElementById("sum").value=c;
+
+        }
+   
+	</script>
+	
 </body>
 </html>
