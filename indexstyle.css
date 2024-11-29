@@ -1,0 +1,49 @@
+body, html{
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: #f0e5c7;
+}
+
+h1, h2, h3, h4{
+  font-family: "Inconsolata", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+body{
+  font-family: "Inconsolata", sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu {
+  display: none;
+}
+
+/* NAVIGATION BAR */
+.topnav {
+  background-color: #8c9657;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #473f34;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  width: 20%;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #473f34;
+  color: #f0e5c7;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #473f34;
+  color: #8c9657;
+}

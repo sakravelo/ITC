@@ -1,0 +1,41 @@
+#dlgbuttons {
+    display : flex;
+    justify-content:space-evenly;
+ }
+
+ #btnConfirm, #btnCancel, #btndelete {
+     border-radius:5px;
+ }
+
+ #btnConfirm {
+   background-color:rgba(187, 163, 207, 0.789);
+   color:white;
+ }
+
+ #btnCancel {
+   color:white;
+   background-color:rgb(86, 58, 74);
+ }
+
+ #dlgConfirmCancel {
+    background-color:lightgrey;
+    border-radius:10px;
+ }
+
+ table, tr, tfoot, td {
+    border: 1px solid #473f34;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ .ndata {
+   text-align: right;
+ }
+
+ .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }

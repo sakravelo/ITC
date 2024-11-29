@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv=”X-UA-Compatible” content=”ie=edge”>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="payroll.css">
+  </head>
+  <body>
+
+    <div class="topnav">
+      <a href="index.html">🏠︎ HOME</a>
+      <a href="UNITCONV.html">UNIT CONVERSION</a>
+      <a href="INCOMETAXCALCU.html">INCOME TAX CALCULATOR</a>
+      <a href="LOOPS.html">LOOP</a>
+      <a class="active" href="PAYROLL.html">PAYROLL</a>
+    </div>
+
+    <div class="container">
+      <h2>Simple Payroll</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Employee No.</td>
+            <td>Employee Name</td>
+            <td>Days Worked</td>
+            <td>Daily Rate</td>
+            <td>Gross Pay</td>
+            <td>Deduction</td>
+            <td>Net Pay</td>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="tGrossPay" class="ndata">0.00</td>
+            <td id="tDeduction" class="ndata">0.00</td>
+            <td id="tNetPay" class="ndata">0.00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div>
+        <h4>Add Employee</h4>
+        <label>Employee Name</label>
+        <input id="empname" type="text"></input>
+        <br><br>
+        <label>Days Worked</label>
+        <input id="empdays" type="number"></input>
+        <br><br>
+        <label>Daily Rate</label>
+        <input id="empdaily" type="number"></input>
+        <br><br>
+        <label>Deduction</label>
+        <input id="empdeduction" type="number"></input>
+        <button id="btnadd">Add</button>
+      </div>
+
+      <div>
+        <p>
+          <label>Delete Emp. No.</label>
+          <input id="delemployee" type="number"></input>
+          <button id="btndelete">Delete</button>
+        </p>
+      </div>
+
+    </div>
+
+    <dialog id="dlgConfirmCancel">
+      <form method="dialog">
+        <h4 id="dlgmsg"></h4>
+        <div id="dlgbuttons">
+          <button id="btnConfirm" value="confirm">Confirm</button>
+          <button id="btnCancel" value="cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="payroll.js"></script>
+
+  </body>
+</html>
