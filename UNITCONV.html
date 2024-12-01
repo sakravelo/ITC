@@ -10,61 +10,78 @@
 			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 			<link rel="stylesheet" href="indexstyle.css">
+			<link rel="stylesheet" href="unit.css"
 		</head>
 	<body>
-			<div class="topnav">
+			<div class="topnav" id="navbar">
 				<a href="index.html">🏠︎ HOME</a>
 				<a class="active" href="UNITCONV.html">UNIT CONVERSION</a>
 				<a href="INCOMETAXCALCU.html">INCOME TAX CALCULATOR</a>
 				<a href="LOOPS.html">LOOP</a>
 				<a href="PAYROLL.html">PAYROLL</a>
 			  </div>
-		<p>
+			  
+		<div class="h2">
+			<h2 id="title" class="header2">Unit Conversion</h2>
+		</div>
+		
+		<div id="celfar" class="flex-container">
+		<div class="flex-items">
 		<h4>Celcius to Fahrenheit</h4>
 		
 			<label for="c">Celcius</label>
 			<input id="celcius" name="celcius" type="number"></input>
-		
+			<br><br>
 			<label for="ctofar" id="ctofarlabel">Farenheit</label>  
 			<input id="ctofar" name="ctofar" type="number" readonly></input>
-			<button id="clear1">Clear Values</button>
+			<button id="clear1">ⓧ</button>
 
 		</p>
+		<br><br><br><br>
 		<p>
 		<h4>Fahrenheit to Celcius</h4>
 			
 			<label for="fh">Farenheit</label>
 			<input id="farenheit" name="farenheit" type="number"></input>
-			
+			<br><br>
 			<label for="ftocel" id="ftocellabel">Celcius</label>  
 			<input id="ftocel" name="ftocel" type="number" readonly></input>
-			<button id="clear2">Clear Values</button>
+			<button id="clear2">ⓧ</button>
 
 		</p>
-
+		</div>
+		<div id="mft" class="flex-items">
 		<h4>Meters to Feet</h4>
 		
 			<label for="m">Meters</label>
 			<input id="meters" name="meters" type="number"></input>
-		
+			<br><br>
 			<label for="mtof" id="mtoflabel">Feet</label>  
 			<input id="mtof" name="mtof" type="number" readonly></input>
-			<button id="clear3">Clear Values</button>
+			<button id="clear3">ⓧ</button>
 
 		</p>
-
+		<br><br><br><br>
 		<p>
 		<h4>Feet to Meters</h4>
 			
 			<label for="f">Feet</label>
 			<input id="feet" name="feet" type="number"></input>
-			
+			<br><br>
 			<label for="ftom" id="ftomlabel">Meters</label>  
 			<input id="ftom" name="ftom" type="number" readonly></input>
-			<button id="clear4">Clear Values</button>
+			<button id="clear4">ⓧ</button>
 			
 		</p>
-			
+		</div>
+	</div>
+
+	<div class="footer">
+		<footer id="foot">
+			<p>RAVELO, SOPHIA ANTOINETTE K. ✪ 4-335 ✪ CS 1130</p>
+		</footer>
+	</div>
+	
 		<script src="unit.js"></script>
 		
 	</body>
