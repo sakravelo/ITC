@@ -1,0 +1,35 @@
+.footer{
+    display: block;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+  
+.flex-items:nth-child(1){
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+    margin: 30px 30px 100px;
+}
+  
+.flex-items:nth-child(2){
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    margin: 30px 30px 100px;
+}
+
