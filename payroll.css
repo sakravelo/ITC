@@ -45,9 +45,9 @@ table, tr, tfoot, td, th {
 
 @media screen and (max-width: 600px) {
   .table-wrapper {
-    min-width: 100%; /* Allow table to fit smaller screens */
-    margin: 10px; /* Add consistent margin on smaller screens */
-    padding: 5px; /* Add padding to prevent sticking */
+    min-width: 100%; 
+    margin: 10px; 
+    padding: 5px; 
   }
 }
 
