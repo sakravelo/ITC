@@ -1,9 +1,7 @@
 document.getElementById("compute").addEventListener("click", function () {
-        // Get taxable income and implicitly convert to number
         var it;
         let ti = document.getElementById("tax").value*1;
 
-        // Calculate income tax based on the tax brackets
         if (ti < 250000) {
             it = 0; // No tax
         } else if (ti <= 400000) {
@@ -18,7 +16,6 @@ document.getElementById("compute").addEventListener("click", function () {
             it = 2410000 + 0.35 * (ti - 8000000);
         }
 
-        // Display the result
         document.getElementById("incometax").value = it.toFixed(2);
     });
 
