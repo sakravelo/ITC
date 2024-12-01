@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv=”X-UA-Compatible” content=”ie=edge”>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="indexstyle.css">
@@ -11,7 +11,7 @@
   </head>
   <body>
 
-    <div class="topnav">
+    <div class="topnav" id="navbar">
       <a href="index.html">🏠︎ HOME</a>
       <a href="UNITCONV.html">UNIT CONVERSION</a>
       <a href="INCOMETAXCALCU.html">INCOME TAX CALCULATOR</a>
@@ -19,61 +19,66 @@
       <a class="active" href="PAYROLL.html">PAYROLL</a>
     </div>
 
-    <div class="container">
-      <h2>Simple Payroll</h2>
+    <div class="h2">
+      <h2 id="title" class="header2">Payroll</h2>
+    </div>
 
-      <table>
-        <thead>
-          <tr>
-            <td>Employee No.</td>
-            <td>Employee Name</td>
-            <td>Days Worked</td>
-            <td>Daily Rate</td>
-            <td>Gross Pay</td>
-            <td>Deduction</td>
-            <td>Net Pay</td>
-          </tr>
-        </thead>
-        <tbody id="tablebody">
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="tGrossPay" class="ndata">0.00</td>
-            <td id="tDeduction" class="ndata">0.00</td>
-            <td id="tNetPay" class="ndata">0.00</td>
-          </tr>
-        </tfoot>
-      </table>
+    <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Employee No.</th>
+              <th>Employee Name</th>
+              <th>Days Worked</th>
+              <th>Daily Rate</th>
+              <th>Gross Pay</th>
+              <th>Deduction</th>
+              <th>Net Pay</th>
+            </tr>
+          </thead>
+          <tbody id="tablebody">
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td id="tGrossPay" class="ndata">0.00</td>
+              <td id="tDeduction" class="ndata">0.00</td>
+              <td id="tNetPay" class="ndata">0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
 
-      <div>
+    <div class="table-actions">
+      <div id="input" class="w3-container">
         <h4>Add Employee</h4>
-        <label>Employee Name</label>
-        <input id="empname" type="text"></input>
+        <label for="employeeName">Employee Name</label>
+        <input type="text" id="empname" placeholder="Enter name">
         <br><br>
-        <label>Days Worked</label>
-        <input id="empdays" type="number"></input>
+        <label for="daysWorked">Days Worked</label>
+        <input type="number" id="empdays" placeholder="Enter days worked">
         <br><br>
-        <label>Daily Rate</label>
-        <input id="empdaily" type="number"></input>
+        <label for="dailyRate">Daily Rate</label>
+        <input type="number" id="empdaily" placeholder="Enter daily rate">
         <br><br>
-        <label>Deduction</label>
-        <input id="empdeduction" type="number"></input>
+        <label for="deduction">Deduction</label>
+        <input type="number" id="empdeduction" placeholder="Enter deduction">
+        
         <button id="btnadd">Add</button>
       </div>
 
-      <div>
-        <p>
-          <label>Delete Emp. No.</label>
-          <input id="delemployee" type="number"></input>
-          <button id="btndelete">Delete</button>
-        </p>
+      <div id="del" class="w3-container del">
+        <h4>Delete Employee</h4>
+        <label for="delemployee">Employee No.</label>
+        <input id="delemployee" type="number">
+        <button class="delete-btn" id="btndelete">Delete</button>
       </div>
-
+      
     </div>
+    
 
     <dialog id="dlgConfirmCancel">
       <form method="dialog">
@@ -85,7 +90,12 @@
       </form>
     </dialog>
 
+    <div class="footer">
+      <footer id="foot">
+        <p>RAVELO, SOPHIA ANTOINETTE K. ✪ 4-335 ✪ CS 1130</p>
+      </footer>
+    </div>
+    
     <script src="payroll.js"></script>
-
   </body>
 </html>
