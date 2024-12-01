@@ -4,7 +4,7 @@ document.getElementById("compute").addEventListener("click", function () {
         let ti = document.getElementById("tax").value*1;
 
         // Calculate income tax based on the tax brackets
-        if (ti <= 250000) {
+        if (ti < 250000) {
             it = 0; // No tax
         } else if (ti <= 400000) {
             it = 0.20 * (ti - 250000);
