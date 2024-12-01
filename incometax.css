@@ -1,0 +1,24 @@
+#inct{
+    height: 30%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table, tr, tfoot, td, th {
+    border: 1px solid #473f34;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
