@@ -1,41 +1,108 @@
-#dlgbuttons {
-    display : flex;
-    justify-content:space-evenly;
- }
-
- #btnConfirm, #btnCancel, #btndelete {
-     border-radius:5px;
- }
-
- #btnConfirm {
-   background-color:rgba(187, 163, 207, 0.789);
-   color:white;
- }
-
- #btnCancel {
-   color:white;
-   background-color:rgb(86, 58, 74);
- }
-
- #dlgConfirmCancel {
-    background-color:lightgrey;
-    border-radius:10px;
- }
-
- table, tr, tfoot, td {
+table, tr, tfoot, td, th {
     border: 1px solid #473f34;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
- }
+    padding: 10px;
+    margin: 10px;
+}
 
- .ndata {
-   text-align: right;
- }
+.table-wrapper {
+  margin: 20px auto;         
+  max-width: 60%;
+  min-width: 600px;
+  overflow-x: auto;
+  padding: 0 10px;
+  display: block;
+}
 
- .container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 800px) {
+  .table th, .table td {
+      padding: 8px;            
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .table th, .table td {
+      padding: 5px;            
+  }
+
+ 
+  .table th, .table td {
+      font-size: 14px;        
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .table-wrapper {
+    min-width: 100%; /* Allow table to fit smaller screens */
+    margin: 10px; /* Add consistent margin on smaller screens */
+    padding: 5px; /* Add padding to prevent sticking */
+  }
+}
+
+
+#dlgbuttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#btnConfirm, #btnCancel, #btndelete{
+  border-radius: 5px;
+}
+
+#btnConfirm{
+  background-color: #8c9657;
+  color: #312b23;
+}
+
+#btnCancel{
+  color: #8c9657;
+  background-color: #473f34;
+}
+
+#dlgConfirmCancel{
+  background-color: #f0e5c7;
+  color: #473f34;
+  border-radius: 10px;
+}
+
+.ndata{
+  text-align: center;
+}
+
+h4{
+  font-family: "Inconsolata", sans-serif;
+  font-weight: bold;
+}
+    
+.table-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin: 20px auto;
+  max-width: 60%; 
+}
+
+#w3-container {
+  width: 48%; 
+}
+
+#input {
+  text-align: left; 
+  margin-bottom: 50px;
+}
+
+#del {
+  text-align: right;
+}
