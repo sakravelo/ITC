@@ -1,13 +1,10 @@
 let payroll = [];
-
-      // Event listener for adding an employee
       document.getElementById("btnadd").addEventListener("click", function() {
         let name = document.getElementById("empname").value;
         let daysWorked = document.getElementById("empdays").value * 1;
         let dailyRate = document.getElementById("empdaily").value * 1;
         let deduction = document.getElementById("empdeduction").value * 1;
 
-        if (name && daysWorked > 0 && dailyRate > 0 && deduction >= 0) {
           let grossPay = (daysWorked * dailyRate).toFixed(2);
           let netPay = (grossPay - deduction).toFixed(2);
 
@@ -22,29 +19,23 @@ let payroll = [];
 
           payroll.push(employee);
           showEmployees();
-          // Reset inputs after adding
+          
           document.getElementById("empname").value = '';
           document.getElementById("empdays").value = '';
           document.getElementById("empdaily").value = '';
           document.getElementById("empdeduction").value = '';
-        } else {
-          alert("Please fill out all fields correctly.");
-        }
+        
       });
 
-      // Event listener for deleting an employee
       document.getElementById("btndelete").addEventListener("click", function() {
         let empNum = document.getElementById("delemployee").value * 1 - 1;
 
-        if (empNum >= 0 && empNum < payroll.length) {
-          document.getElementById("dlgmsg").innerHTML = "Delete the employee " + (empNum + 1) + " " + payroll[empNum].name + "?";
+          document.getElementById("dlgmsg").innerHTML = "Delete Employee " + (empNum + 1) + " " + payroll[empNum].name + "?";
           document.getElementById("dlgConfirmCancel").showModal();
-        } else {
-          alert("Invalid employee number.");
-        }
+  
       });
 
-      // Event listener for confirming deletion
+      
       document.getElementById("btnConfirm").addEventListener("click", function() {
         let empNum = document.getElementById("delemployee").value * 1 - 1;
         payroll.splice(empNum, 1);
@@ -53,13 +44,13 @@ let payroll = [];
         document.getElementById("dlgConfirmCancel").close();
       });
 
-      // Event listener for canceling deletion
+      
       document.getElementById("btnCancel").addEventListener("click", function() {
         document.getElementById("delemployee").value = '';
         document.getElementById("dlgConfirmCancel").close();
       });
 
-      // Show employees in table
+      
       function showEmployees() {
         let tb = "";
         let lno = 1;
